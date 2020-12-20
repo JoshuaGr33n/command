@@ -1,0 +1,117 @@
+<html>
+
+<title>Untitled Document</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<SCRIPT language="javascript">
+
+    $(function () {
+
+        // add multiple select / deselect functionality
+
+        $("#selectall").click(function () {
+
+            $('.name').attr('checked', this.checked);
+
+        });
+
+ 
+
+        // if all checkbox are selected, then check the select all checkbox
+
+        // and viceversa
+
+        $(".name").click(function () {
+
+ 
+
+            if ($(".name").length == $(".name:checked").length) {
+
+                $("#selectall").attr("checked", "checked");
+
+            } else {
+
+                $("#selectall").removeAttr("checked");
+
+            }
+
+ 
+
+        });
+
+    });
+
+</SCRIPT>
+
+</head>
+
+ 
+
+<body bgcolor="#F5F9C1">
+
+<table border="1">
+
+<tr>
+
+<th colspan="3"><input type="checkbox" id="selectall"/> 
+
+  Name Rating</th>
+
+</tr>
+
+<tr>
+
+<td width="20" align="center"><input type="checkbox" class="name" name="name" value="1"/></td>
+
+<td width="92">Vinod kumar</td>
+
+<td width="42">5</td>
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="checkbox" class="name" name="name" value="2"/></td>
+
+<td>Sharad Gupta</td>
+
+<td>3</td>
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="checkbox" class="name" name="name" value="3"/></td>
+
+<td>Nitin Bhardwaj</td>
+
+<td>2</td>
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="checkbox" class="name" name="name" value="4"/></td>
+
+<td>Aman</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td align="center"><input type="checkbox" class="name" name="name" value="5"/></td>
+
+<td>Rahul Sharma</td>
+
+<td>4</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>
